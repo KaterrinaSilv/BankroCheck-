@@ -16,7 +16,7 @@ poppler_path = r'C:\Users\kater\Desktop\колыбель для кошки\ба�
 os.environ["PATH"] += os.pathsep + poppler_path
 
 # Учетные данные для Google API
-SERVICE_ACCOUNT_FILE = 'service_account.json'
+SERVICE_ACCOUNT_FILE = '../service_account.json'
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 credentials = service_account.Credentials.from_service_account_file(
@@ -96,8 +96,8 @@ def insert_data_to_db(citizen_data, citizen_id, pdf_path, output_folder):
 
 
 # Путь к файлу с данными о гражданах
-input_file = 'dataset.csv'
-output_dir = 'citizens_json'
+input_file = '../data/raw/dataset.csv'
+output_dir = '../data/processed/citizens_json'
 pdf_path = 'document.pdf'  # Временный PDF
 scans_output_folder = 'scans_png'
 
